@@ -319,11 +319,11 @@ function DashboardContent({ currentUser, onUpdateUser, onLogout }) {
       </aside>
 
       {/* Main Workspace Frame */}
-      <div className="flex-1 h-full flex flex-col overflow-hidden relative">
+      <div className="flex-1 h-full min-h-screen overflow-y-auto flex flex-col relative">
         
         {/* 2. Top Navbar */}
         <header className="h-20 w-full flex items-center justify-between px-8 border-b border-white/5 glass-navbar relative z-20 shrink-0">
-          <div className="text-left">
+          <div className="text-left pt-4 pb-2 px-6">
             <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-200">
               AI Investment Analytics Dashboard
             </h1>

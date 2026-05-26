@@ -114,3 +114,12 @@
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.7) !important;
   backdrop-filter: blur(8px) !important;
 }
+
+/* Global viewport scrolling and overflow safeguards */
+html, body, #root {
+  height: 100%;
+  overflow-x: hidden;
+}
+#root {
+  overflow-y: auto;
+}

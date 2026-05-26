@@ -32,6 +32,17 @@ export default function FinanceChatbot({ livePrices = {}, marketOverview = [], n
     scrollToBottom('smooth');
   }, [messages, isLoading]);
 
+  useEffect(() => {
+    // Set overflow hidden for chat UI
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    
+    // Cleanup function - CRITICAL
+    return () => {
+      document.body.style.overflow = originalOverflow || 'auto';
+    };
+  }, []);
+
   // Handle Clipboard Copy for Message
   const handleCopyMessage = (text, id) => {
     navigator.clipboard.writeText(text);
